@@ -1,15 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
-import {  } from "@a-boss/ui";
+import { UiModule } from "@a-boss/ui";
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    UiModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
