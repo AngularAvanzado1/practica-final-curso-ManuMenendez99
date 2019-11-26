@@ -1,13 +1,15 @@
 import { getGreeting } from '../support/app.po';
 
-describe('shop', () => {
+describe('GIVEN: the shop web app', () => {
   beforeEach(() => cy.visit('/'));
-
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome to shop!');
+  context('WHEN: user visits home page', () => {
+    it('THEN: should display welcome message', () => {
+      getGreeting().contains('Hello world');
+    });
+    // needs the api server to run
+    // yarn start:api
+    it('THEN: should display welcome message from the API', () => {
+      getGreeting().contains('and Welcome to api!');
+    });
   });
 });
