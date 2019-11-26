@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-boss/shared/domain": ["libs/shared/domain/src/index.ts"]
+      "@a-boss/domain": ["libs/shared/domain/src/index.ts"],
+      "@a-boss/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
