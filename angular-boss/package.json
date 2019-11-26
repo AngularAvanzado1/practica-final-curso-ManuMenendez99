@@ -7,7 +7,7 @@
     "nx": "nx",
     "start:shop": "ng serve shop --open --port=4201",
     "start:warehouse": "ng serve warehouse --open --port=4202",
-    "start:api": "ng serve api --port=4203",
+    "start:api": "ng serve api",
     "build:shop": "ng build shop --prod",
     "build:warehouse": "ng build warehouse --prod",
     "build:api": "ng build api --prod",
