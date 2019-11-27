@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, OnInit } from '@angular/core';
 import { BasketService } from './basket.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { BasketService } from './basket.service';
   templateUrl: './app.component.html',
   styles: []
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shop';
   public basketUnits = 0;
   public basket = [];
@@ -24,5 +24,10 @@ export class AppComponent {
         this.cdr.detectChanges();
       }
     })
+  }
+
+  public getNumItems() {
+    console.count('get NUM_ITEMS calls');
+    return this.basket.length;
   }
 }
