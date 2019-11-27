@@ -9,9 +9,11 @@ import { UiModule } from "@a-boss/ui";
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([{ path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) }], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot([{ path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) }, { path: 'catalog', loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule) }], { initialNavigation: 'enabled' }),
+    StoreRouterConnectingModule.forRoot({ routerState: RouterState.Minimal }),
+    StoreModule.forRoot({router: RouterReducer}),
     UiModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

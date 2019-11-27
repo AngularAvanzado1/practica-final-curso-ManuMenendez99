@@ -31,6 +31,12 @@
     },
     "shared-data": {
       "tags": []
+    },
+    "products": {
+      "tags": []
+    },
+    "rx-store": {
+      "tags": []
     }
   }
 }
