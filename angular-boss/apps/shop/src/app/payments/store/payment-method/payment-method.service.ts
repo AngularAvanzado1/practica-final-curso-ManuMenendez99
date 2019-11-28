@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/Store';
+import { Store } from '@ngrx/store';
 import * as PaymentMethodActions from "./payment-method.actions";
 import { PaymentMethods,PaymentMethod } from "./payment-method.model";
 @Injectable({
   providedIn: 'root'
 })
-export class PaymentMethodFacade {
+export class PaymentMethodService {
 
   constructor(private store: Store<PaymentMethods>) { }
 

@@ -5,11 +5,11 @@ import { PaymentMethods } from './payment-method.model';
 export const paymentMethodFeatureKey = 'paymentMethod';
 
 export interface State {
-  paymentMethods: PaymentMethods;
+  PaymentMethods: PaymentMethods;
 }
 
 export const initialState: State = {
-  paymentMethods: { list: [], preferred: null}
+  PaymentMethods: { list: [], preferred: null}
 };
 
 const paymentMethodReducer = createReducer(
@@ -18,18 +18,18 @@ const paymentMethodReducer = createReducer(
   on(PaymentMethodActions.selectPreferredPaymentMethod,(state, { preferredID }) => {
     return {
       ...state,
-      PaymentMethods: {...state.paymentMethods, preferred: preferredID}
+      PaymentMethods: {...state.PaymentMethods, preferred: preferredID}
     };
   }),
   on(PaymentMethodActions.setExpirationPaymentMethod,(state, { updatedPaymentMethod}) => {
-    const list = state.paymentMethods.list;
+    const list = state.PaymentMethods.list;
     const updatedlist = list.map(pM =>
       pM.id === updatedPaymentMethod.id ? updatedPaymentMethod : pM
     );
     return {
       ...state,
       paymentMethods: {
-        ...state.paymentMethods,
+        ...state.PaymentMethods,
         list: updatedlist
       }
     }

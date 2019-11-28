@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PaymentMethodFacade as PaymentMethodService } from './store/payment-method/payment-method.service';
+import { PaymentMethodService } from './store/payment-method/payment-method.service';
 import { PaymentMethod } from './store/payment-method/payment-method.model';
 
 @Component({
