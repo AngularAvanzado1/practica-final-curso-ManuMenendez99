@@ -19,8 +19,10 @@ const routes: Routes = [
     CommonModule,
     PaymentsRoutingModule,
     RouterModule.forChild(routes),
-    StoreModule.forFeature(fromPaymentMethod.paymentMethodFeatureKey, fromPaymentMethod.reducer),
-    EffectsModule.forFeature([PaymentMethodEffects])
+    StoreModule.forFeature(
+      fromPaymentMethod.paymentMethodFeatureKey,
+      fromPaymentMethod.reducer),
+    EffectsModule.forFeature([PaymentMethodEffects]),
   ]
 })
 export class PaymentsModule { }
