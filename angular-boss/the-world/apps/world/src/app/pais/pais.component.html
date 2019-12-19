@@ -1,0 +1,27 @@
+<ab-world-child [childExample]="parentExample"></ab-world-child>
+<ab-world-child (exampleOutput)="exampleMethodParent($event)"></ab-world-child>
+<div *ngIf="paises$ | async as paises">
+  <div *ngFor="let pais of paises">
+    Pais: {{ pais.name }}<br />
+    Id: {{ pais.id }}<br />
+    Iso2code: {{ pais.iso2Code }}<br />
+    capital: {{ pais.capitalCity }}<br />
+    coordenadas: {{ pais.longitude }}, {{ pais.latitude }}<br />
+    Region:<br />
+    - id: {{ pais.region.id }}<br />
+    - iso2code: {{ pais.region.iso2Code }}<br />
+    - nombre: {{ pais.region.value }}<br />
+    AdminRegion:<br />
+    - id: {{ pais.adminregion.id }}<br />
+    - iso2code: {{ pais.adminregion.iso2Code }}<br />
+    - nombre: {{ pais.adminregion.value }}<br />
+    incomeLevel:<br />
+    - id: {{ pais.incomeLevel.id }}<br />
+    - iso2code: {{ pais.incomeLevel.iso2Code }}<br />
+    - nombre: {{ pais.incomeLevel.value }}<br />
+    lendingType:<br />
+    - id: {{ pais.lendingType.id }}<br />
+    - iso2code: {{ pais.lendingType.iso2Code }}<br />
+    - nombre: {{ pais.lendingType.value }}<br />
+  </div>
+</div>

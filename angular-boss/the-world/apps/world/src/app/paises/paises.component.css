@@ -1,0 +1,15 @@
+.mat-column-actions {
+  text-align: right;
+  justify-content: flex-end;
+}
+table {
+  width: 100%;
+}
+
+.no-records {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
